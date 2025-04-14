@@ -16,27 +16,30 @@ namespace JuegoCombateRPG
 
         public override void Atacar(Personaje objetivo)
         {
-            // Si ya es Hombre Lobo
+            string armaUsada = equipo != null ? $" usando {equipo.getNombre()}" : "";
+
             if (esHombreLobo)
             {
-                Console.WriteLine($"{GetNombre()} ataca con la ferocidad de un lobo.");
+                Console.WriteLine($"{GetNombre()} ataca a {objetivo.GetNombre()}{armaUsada} con la ferocidad de un lobo.");
+
                 objetivo.RecibirDanio((int)(GetAtaque() * 1.5));
             }
             else
             {
-                // Ataca normalmente
-                Console.WriteLine($"{GetNombre()} ataca a {objetivo.GetNombre()}.");
+
+                Console.WriteLine($"{GetNombre()} ataca a {objetivo.GetNombre()}{armaUsada}.");
+
                 objetivo.RecibirDanio(GetAtaque());
 
-                // Probabilidad de transformación (30%)
+                
                 Random random = new Random();
-                int probabilidad = random.Next(1, 101); // entre 1 y 100
+                int probabilidad = random.Next(1, 101); 
 
                 if (probabilidad <= 30)
                 {
                     esHombreLobo = true;
                     Console.WriteLine($"¡{GetNombre()} se transforma en Hombre Lobo! +50% de daño.");
-                    // No es necesario cambiar el ataque base, simplemente aplicamos el +50% en cada ataque futuro
+                    
                 }
             }
         }

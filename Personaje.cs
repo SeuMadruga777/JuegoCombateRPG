@@ -8,22 +8,22 @@ namespace JuegoCombateRPG
 {
     public class Personaje
     {
-        // Atributos protegidos
+        
         protected string nombre;
         protected int vida;
         protected int ataque;
-        protected Equipo equipo; // Ahora es parte del personaje
+        protected Equipo equipo; 
 
-        // Constructor
+        
         public Personaje(string nombre, int vida, int ataque)
         {
             this.nombre = nombre;
             this.vida = vida;
             this.ataque = ataque;
-            this.equipo = null; // Por defecto sin equipo
+            this.equipo = null; 
         }
 
-        // Métodos GET
+        
         public string GetNombre() { return nombre; }
         public int GetVida() { return vida; }
 
@@ -36,22 +36,25 @@ namespace JuegoCombateRPG
             return ataque;
         }
 
-        // Método para asignar equipo
+        
         public void AsignarEquipo(Equipo nuevoEquipo)
         {
             equipo = nuevoEquipo;
             Console.WriteLine($"{nombre} ha equipado {equipo.getNombre()}.");
         }
 
-        // Método Atacar
+        
         public virtual void Atacar(Personaje objetivo)
         {
             int danio = GetAtaque();
-            Console.WriteLine($"{nombre} ataca a {objetivo.GetNombre()} con {danio} de daño.");
+
+            string armaUsada = equipo != null ? $" usando {equipo.getNombre()}" : "";
+
+            Console.WriteLine($"{nombre} ataca a {objetivo.GetNombre()}{armaUsada} con {danio} de daño.");
             objetivo.RecibirDanio(danio);
         }
 
-        // Método Recibir Daño
+       
         public virtual void RecibirDanio(int danio)
         {
             int danioReducido = danio;

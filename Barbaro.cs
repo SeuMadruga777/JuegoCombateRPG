@@ -18,7 +18,7 @@ namespace JuegoCombateRPG
 
         public override void Atacar(Personaje objetivo)
         {
-            // Ejemplo de lógica: daño base + furia
+            
             int danio = GetAtaque() + this.furia;
             objetivo.RecibirDanio(danio);
             Console.WriteLine($"{GetNombre()} ataca con furia a {objetivo.GetNombre()} causando {danio} de daño.");

@@ -10,7 +10,7 @@ namespace JuegoCombateRPG
     {
         static void Main(string[] args)
         {
-            // Primeros personajes y sus equipos
+            
             Barbaro barbaro = new Barbaro("Gronk", 50, 12, 9);
             Sacerdote sacerdote = new Sacerdote("Elias", 45, 10);
             Equipo hacha = new Equipo("Hacha Rústica", 5, 0);
@@ -21,7 +21,7 @@ namespace JuegoCombateRPG
 
             Console.WriteLine("\n⚔️ Primera Batalla: Gronk vs Elias ⚔️\n");
 
-            // Primera batalla
+            
             Personaje ganador = Batalla(barbaro, sacerdote);
 
             if (ganador == null)
@@ -30,7 +30,7 @@ namespace JuegoCombateRPG
                 return;
             }
 
-            // 🚨 Segunda parte: crear personaje personalizado
+            
             Console.WriteLine("\n🛡️ Crea tu personaje personalizado (Campesino)\n");
 
             Console.Write("Nombre: ");
@@ -67,10 +67,10 @@ namespace JuegoCombateRPG
             {
                 Console.WriteLine("\n❌ Ambos han caído en la segunda batalla.");
             }
-            Console.ReadKey(); // <- Espera a que el usuario presione una tecla
+            Console.ReadKey(); 
         }
 
-        // 🧠 Método para batallar entre dos personajes
+        
         public static Personaje Batalla(Personaje p1, Personaje p2)
         {
             while (p1.GetVida() > 0 && p2.GetVida() > 0)
