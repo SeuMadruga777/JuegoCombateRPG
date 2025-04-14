@@ -1,0 +1,7 @@
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\bin\Debug\JuegoCombateRPG.exe.config
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\bin\Debug\JuegoCombateRPG.exe
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\bin\Debug\JuegoCombateRPG.pdb
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\obj\Debug\JuegoCombateRPG.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\obj\Debug\JuegoCombateRPG.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\obj\Debug\JuegoCombateRPG.exe
+C:\Users\danie\OneDrive\Desktop\JuegoCombateRPG\JuegoCombateRPG\obj\Debug\JuegoCombateRPG.pdb
